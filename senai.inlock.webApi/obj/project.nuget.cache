@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Zf5B9w3Up5PDHq9y6ltdMqLcOlroMW/M0T1p9SaUXpzilIrw1aTiBQaMI5lzEnsMlQ4vTBz122rMvJC3iLs+6g==",
+  "dgSpecHash": "/AzJP3YrruRordYNll8deiiG8sDLzaP+lZJtrjAuY9DuCDxl5NQ8vulbBHMEv0wODfeMZXd/Aji7D/4QfP1xdw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\57267874800\\source\\repos\\senai.inlock.webApi\\senai.inlock.webApi.csproj",
+  "projectFilePath": "C:\\Users\\57267874800\\Desktop\\Inlock\\senai.inlock.webApi\\senai.inlock.webApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\57267874800\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\57267874800\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

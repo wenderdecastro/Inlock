@@ -4,6 +4,26 @@
         <name>senai.inlock.webApi</name>
     </assembly>
     <members>
+        <member name="M:senai.inlock.webApi.Controllers.EstudioController.ListarEstudios">
+            <summary>
+            EndPoint de listagem de estudios
+            </summary>
+            <returns>Retorna uma lista de todos os estudios cadastrados.</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.EstudioController.Cadastrar(senai.inlock.webApi.Domains.EstudioDomain)">
+            <summary>
+            EndPoint de cadastro de estudios
+            </summary>
+            <param name="estudio">estudio a ser cadastrado</param>
+            <returns>status code conforme resultado da requisição e estudio que foi cadastrado</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.UsuarioController.Login(senai.inlock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Endpoint de login do usuário
+            </summary>
+            <param name="usuario">objeto do tipo usuario que será utilizado para realizar a consulta, passando os dados pelo corpo da requisilçao por meio do JSON</param>
+            <returns>retorna o token JWT para autenticação do usuário</returns>
+        </member>
         <member name="M:senai.inlock.webApi.Properties.Controllers.JogoController.ListarJogos">
             <summary>
             EndPoint de listagem de jogos
@@ -23,13 +43,6 @@
             </summary>
             <param name="id">Id do Jogo a ser deletado</param>
             <returns>Retorna um status code e sua respectiva mensagem</returns>
-        </member>
-        <member name="M:senai.inlock.webApi.Controllers.UsuarioController.Login(senai.inlock.webApi.Domains.UsuarioDomain)">
-            <summary>
-            Endpoint de login do usuário
-            </summary>
-            <param name="usuario">objeto do tipo usuario que será utilizado para realizar a consulta, passando os dados pelo corpo da requisilçao por meio do JSON</param>
-            <returns>retorna o token JWT para autenticação do usuário</returns>
         </member>
         <member name="T:senai.inlock.webApi.Domains.EstudioDomain">
             <summary>
@@ -54,6 +67,23 @@
         <member name="P:senai.inlock.webApi.Domains.UsuarioDomain.TipoUsuario">
             <summary>
             Referência a classe tiposusuario que atribui o valor da mesma a usuario, por ser uma foreign key
+            </summary>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IEstudioRepository.Cadastrar(senai.inlock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo estudio
+            </summary>
+            <param name="estudioDomain">Objeto a ser cadastrado.</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IEstudioRepository.ListarEstudios">
+            <summary>
+            Lista todos os estudios existentes
+            </summary>
+            <returns>Uma lista com todos os estudios.</returns>
+        </member>
+        <member name="T:senai.inlock.webApi.Interfaces.IJogoRepository">
+            <summary>
+            Interface responsável pelo repository de jogo
             </summary>
         </member>
         <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.Cadastrar(senai.inlock.webApi.Domains.JogoDomain)">
@@ -86,6 +116,23 @@
             <param name="email">email do usuario</param>
             <param name="senha">senha do usuario</param>
             <returns>retorna um objeto do tipo usuario</returns>
+        </member>
+        <member name="F:senai.inlock.webApi.Repositories.EstudioRepository.StringConexao">
+            <summary>
+            String de conexão com o banco de dados
+            </summary>
+        </member>
+        <member name="M:senai.inlock.webApi.Repositories.EstudioRepository.ListarEstudios">
+            <summary>
+            Lista todos os estudios existentes
+            </summary>
+            <returns>Uma lista com todos os estudios.</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Repositories.EstudioRepository.Cadastrar(senai.inlock.webApi.Domains.EstudioDomain)">
+            <summary>
+            Cadastra um novo estudio
+            </summary>
+            <param name="estudio">Objeto a ser cadastrado.</param>
         </member>
         <member name="F:senai.inlock.webApi.Repositories.JogoRepository.StringConexao">
             <summary>
