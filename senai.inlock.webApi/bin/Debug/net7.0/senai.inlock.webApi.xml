@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>senai.inlock.webApi</name>
+    </assembly>
+    <members>
+        <member name="M:senai.inlock.webApi.Properties.Controllers.JogoController.ListarJogos">
+            <summary>
+            EndPoint de listagem de jogos
+            </summary>
+            <returns>Retorna uma lista de todos os jogos cadastrados.</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Properties.Controllers.JogoController.Cadastrar(senai.inlock.webApi.Domains.JogoDomain)">
+            <summary>
+            EndPoint de cadastro de jogos
+            </summary>
+            <param name="jogo">jogo a ser cadastrado</param>
+            <returns>status code conforme resultado da requisição e jogo que foi cadastrado</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Properties.Controllers.JogoController.Delete(System.Int32)">
+            <summary>
+            EndPoint de exclusão de jogos
+            </summary>
+            <param name="id">Id do Jogo a ser deletado</param>
+            <returns>Retorna um status code e sua respectiva mensagem</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Controllers.UsuarioController.Login(senai.inlock.webApi.Domains.UsuarioDomain)">
+            <summary>
+            Endpoint de login do usuário
+            </summary>
+            <param name="usuario">objeto do tipo usuario que será utilizado para realizar a consulta, passando os dados pelo corpo da requisilçao por meio do JSON</param>
+            <returns>retorna o token JWT para autenticação do usuário</returns>
+        </member>
+        <member name="T:senai.inlock.webApi.Domains.EstudioDomain">
+            <summary>
+            Classe que representa a entidade Estudio
+            </summary>
+        </member>
+        <member name="T:senai.inlock.webApi.Domains.JogoDomain">
+            <summary>
+            Classe que representa a entidade Jogo
+            </summary>
+        </member>
+        <member name="T:senai.inlock.webApi.Domains.TiposUsuarioDomain">
+            <summary>
+            Classe que representa a entidade TiposUsuario
+            </summary>
+        </member>
+        <member name="T:senai.inlock.webApi.Domains.UsuarioDomain">
+            <summary>
+            Classe que representa a entidade usuário
+            </summary>
+        </member>
+        <member name="P:senai.inlock.webApi.Domains.UsuarioDomain.TipoUsuario">
+            <summary>
+            Referência a classe tiposusuario que atribui o valor da mesma a usuario, por ser uma foreign key
+            </summary>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.Cadastrar(senai.inlock.webApi.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo
+            </summary>
+            <param name="jogoDomain">Objeto a ser cadastrado.</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.ListarJogos">
+            <summary>
+            Lista todos os jogos existentes
+            </summary>
+            <returns>Uma lista com todos os jogos.</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IJogoRepository.DeletarJogo(System.Int32)">
+            <summary>
+            Deleta um jogo
+            </summary>
+            <param name="id">id do Jogo a ser deletado</param>
+        </member>
+        <member name="T:senai.inlock.webApi.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface responsavel pelo repository de usuario
+            </summary>
+        </member>
+        <member name="M:senai.inlock.webApi.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Método de login que efetuara a autenticação do usuário
+            </summary>
+            <param name="email">email do usuario</param>
+            <param name="senha">senha do usuario</param>
+            <returns>retorna um objeto do tipo usuario</returns>
+        </member>
+        <member name="F:senai.inlock.webApi.Repositories.JogoRepository.StringConexao">
+            <summary>
+            String de conexão com o banco de dados
+            </summary>
+        </member>
+        <member name="M:senai.inlock.webApi.Repositories.JogoRepository.ListarJogos">
+            <summary>
+            Lista todos os jogos existentes
+            </summary>
+            <returns>Uma lista com todos os jogos.</returns>
+        </member>
+        <member name="M:senai.inlock.webApi.Repositories.JogoRepository.Cadastrar(senai.inlock.webApi.Domains.JogoDomain)">
+            <summary>
+            Cadastra um novo jogo
+            </summary>
+            <param name="jogo">Objeto a ser cadastrado.</param>
+        </member>
+        <member name="M:senai.inlock.webApi.Repositories.JogoRepository.DeletarJogo(System.Int32)">
+            <summary>
+            Deleta um jogo
+            </summary>
+            <param name="id">id do Jogo a ser deletado</param>
+        </member>
+        <member name="F:senai.inlock.webApi.Repositories.UsuarioRepository.StringConexao">
+            <summary>
+            String de conexão com o banco de dados
+            </summary>
+        </member>
+        <member name="M:senai.inlock.webApi.Repositories.UsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Método de login que efetuara a autenticação do usuário
+            </summary>
+            <param name="email">email do usuario</param>
+            <param name="senha">senha do usuario</param>
+            <returns>retorna um objeto do tipo usuario que foi encontrado pelo método, em caso de não encontrado, retorna nulo</returns>
+        </member>
+    </members>
+</doc>
